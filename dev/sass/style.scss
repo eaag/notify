@@ -111,7 +111,7 @@ li,ul,ol{
 	position: relative;
 	i{
 		position: absolute;
-		right: 10px;
+	    right: 8px;
 		top: 50%;
 		margin-top: -7px;
 		color: rgb(33, 165, 184);
@@ -143,4 +143,33 @@ li,ul,ol{
     border-radius: 50%;
     font-weight: 300;
     color: #fff;
+}
+
+
+
+/*************  Dasboard **********************/
+.Dasboard-subnav{
+	height: 50px;
+    border-bottom: 1px solid #bbb;
+    padding-left: 20px;
+    li{
+    	overflow: hidden;
+    }
+    button{
+    	color: #888;
+    	height: 50px;
+    	font-size: 16px;
+    	border-bottom: transparent;
+    	background-color: transparent;
+    	padding: 0 10px;
+    	border-bottom: 3px solid transparent;
+	    line-height: 50px;
+    	&:hover,&:active,&:focus{
+			color: #21a5b8;
+    	}
+    }
+    .active{
+    	color: #21a5b8;
+	    border-bottom: 3px solid #21a5b8;
+    }
 }
