@@ -2363,38 +2363,83 @@ li, ul, ol {
   left: 25px;
   bottom: 25px;
   display: block;
-  width: 56px;
+  width: 59px;
   height: auto;
   position: fixed;
   z-index: 1000;
-  min-height: 200px;
-  background-color: transparent; }
+  max-height: 67px;
+  min-height: 66px;
+  background-color: transparent;
+  padding: 0px 3px 3px;
+  overflow: hidden;
+  -webkit-transition: max-height 0.7s ease-in-out 0.4s;
+  -moz-transition: max-height 0.7s ease-in-out 0.4s;
+  transition: max-height 0.7s ease-in-out 0.4s; }
+  .menu_flotante:hover {
+    overflow: visible;
+    max-height: 246px;
+    padding-bottom: 67px; }
+    .menu_flotante:hover li {
+      opacity: 1; }
+    .menu_flotante:hover li:first-child {
+      margin-top: 0; }
+  .menu_flotante .btn_menu_flotante {
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 2px 4px 0px, 0 2px 4px rgba(0, 0, 0, 0.3);
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #21a5b8; }
+    .menu_flotante .btn_menu_flotante span {
+      display: none;
+      font-size: 10px;
+      left: 50px;
+      white-space: nowrap;
+      position: absolute;
+      line-height: 1;
+      color: #fff;
+      background-color: #15606c;
+      border-radius: 2px;
+      padding: 5px 10px;
+      border-radius: 2px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
   .menu_flotante li {
+    opacity: 0;
     display: block;
     height: 36px;
     width: 36px;
     margin: 10px auto;
     position: relative;
-    text-align: left; }
+    text-align: left;
+    -webkit-transition: opacity 0.7s ease-in-out 0.4s;
+    -moz-transition: opacity 0.7s ease-in-out 0.4s;
+    transition: opacity 0.7s ease-in-out 0.4s; }
+    .menu_flotante li:hover span {
+      display: inline-block; }
+    .menu_flotante li i {
+      color: #FFF; }
+    .menu_flotante li:first-child {
+      margin-top: -180px; }
     .menu_flotante li:last-child {
+      display: block;
+      opacity: 1;
       height: 56px;
       width: 56px;
       text-align: left;
-      margin-left: -1px; }
+      margin-left: -1px;
+      position: absolute;
+      bottom: 0;
+      z-index: 100000; }
+      .menu_flotante li:last-child i {
+        font-size: 22px;
+        display: inline-block;
+        vertical-align: bottom;
+        margin-top: 3px; }
+      .menu_flotante li:last-child span {
+        left: 68px; }
       .menu_flotante li:last-child button {
         background-color: #e45555; }
-
-.btn_menu_flotante {
-  content: ' ';
-  position: absolute;
-  width: 100%;
-  cursor: pointer;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #21a5b8; }
-  .btn_menu_flotante span {
-    left: 50px;
-    white-space: nowrap;
-    position: absolute; }
 
 /*# sourceMappingURL=style.css.map */
