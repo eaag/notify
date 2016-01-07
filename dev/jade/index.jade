@@ -56,7 +56,20 @@ html(lang="en")
 
 			.listado_fechas_entrega
 				.bloque_centrado
-					.titulo_listado
-						i.fa.fa-arrow-down
-						strong Sin fecha de entrega
-						span.contador (1)  
+					.contenido_listado
+						.titulo_listado
+							i.fa.fa-angle-down
+							strong Hoy
+							span.contador (2)  
+						.sub_cont
+							input(type="checkbox", name="tarea", value="true")
+							p Modals
+							strong Urgente
+							span: a(href="") Espacio de trabajo
+						.sub_cont
+							p(style="position:relative")
+								input(type="checkbox", name="tarea", value="true", id="test2", checked="checked" )
+								label(for="test2") as
+							p Tarea 2
+							.espacio_trabajo
+								span #[a(href="") Espacio de trabajo]> #[a(href="") tarea]

@@ -2318,7 +2318,7 @@ li, ul, ol {
     line-height: 1.5;
     font-weight: 30; }
   .contenedor_tareas .todo-ok {
-    padding: 60px 20px 20px;
+    padding: 75px 20px 20px;
     text-shadow: 0 1px #f6f6f6; }
   .contenedor_tareas .header {
     border: 1px solid #ebebeb;
@@ -2344,45 +2344,20 @@ li, ul, ol {
       padding: 2px 4px;
       float: right; }
 
-.bloque_centrado {
-  margin: 0 auto;
-  max-width: 700px;
-  display: block; }
-
-.listado_fechas_entrega {
-  width: 60%;
-  left: 40%;
-  background-color: #fafafa; }
-  .listado_fechas_entrega .titulo_listado {
-    margin: 10px;
-    border: solid 1px #dddddd;
-    padding: 10px 0; }
-
-/*****************  boton  flotante   ******************/
+/******************************************************
+*****************  boton flotante *********************
+*******************************************************/
 .menu_flotante {
-  left: 25px;
-  bottom: 25px;
+  left: 23px;
+  bottom: 16px;
   display: block;
   width: 59px;
   height: auto;
   position: fixed;
   z-index: 1000;
-  max-height: 67px;
   min-height: 66px;
   background-color: transparent;
-  padding: 0px 3px 3px;
-  overflow: hidden;
-  -webkit-transition: max-height 0.7s ease-in-out 0.4s;
-  -moz-transition: max-height 0.7s ease-in-out 0.4s;
-  transition: max-height 0.7s ease-in-out 0.4s; }
-  .menu_flotante:hover {
-    overflow: visible;
-    max-height: 246px;
-    padding-bottom: 67px; }
-    .menu_flotante:hover li {
-      opacity: 1; }
-    .menu_flotante:hover li:first-child {
-      margin-top: 0; }
+  padding: 0px 3px 3px; }
   .menu_flotante .btn_menu_flotante {
     box-shadow: rgba(0, 0, 0, 0.298039) 0px 2px 4px 0px, 0 2px 4px rgba(0, 0, 0, 0.3);
     content: ' ';
@@ -2412,12 +2387,7 @@ li, ul, ol {
     width: 36px;
     margin: 10px auto;
     position: relative;
-    text-align: left;
-    -webkit-transition: opacity 0.7s ease-in-out 0.4s;
-    -moz-transition: opacity 0.7s ease-in-out 0.4s;
-    transition: opacity 0.7s ease-in-out 0.4s; }
-    .menu_flotante li:hover span {
-      display: inline-block; }
+    text-align: left; }
     .menu_flotante li i {
       color: #FFF; }
     .menu_flotante li:first-child {
@@ -2441,5 +2411,138 @@ li, ul, ol {
         left: 68px; }
       .menu_flotante li:last-child button {
         background-color: #e45555; }
+
+.menu_flotante {
+  max-height: 67px;
+  overflow: hidden; }
+  .menu_flotante:hover {
+    overflow: visible;
+    max-height: 246px;
+    padding-bottom: 67px; }
+    .menu_flotante:hover li {
+      opacity: 1; }
+    .menu_flotante:hover li:first-child {
+      margin-top: 0; }
+  .menu_flotante li:hover span {
+    display: inline-block; }
+  .menu_flotante li {
+    opacity: 0; }
+  .menu_flotante li:nth-child(1) {
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out; }
+  .menu_flotante li:nth-child(2) {
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out; }
+  .menu_flotante li:nth-child(3) {
+    -webkit-transition: opacity 0.6s ease-in-out;
+    -moz-transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out; }
+  .menu_flotante li:nth-child(4) {
+    -webkit-transition: opacity 0.7s ease-in-out;
+    -moz-transition: opacity 0.7s ease-in-out;
+    transition: opacity 0.7s ease-in-out; }
+
+/****************** listado de tareas  ****************/
+.bloque_centrado {
+  margin: 0 auto;
+  max-width: 700px;
+  display: block; }
+
+.listado_fechas_entrega {
+  width: 60%;
+  left: 40%;
+  background-color: #fafafa; }
+  .listado_fechas_entrega .contenido_listado {
+    background-color: #fff;
+    margin: 10px;
+    border: solid 1px #dddddd; }
+  .listado_fechas_entrega .titulo_listado {
+    border-bottom: 3px solid #d5d5d5;
+    padding: 15px 15px 10px; }
+    .listado_fechas_entrega .titulo_listado strong {
+      font-weight: 600;
+      margin: 0 10px; }
+    .listado_fechas_entrega .titulo_listado i {
+      font-size: 14px;
+      color: #888; }
+    .listado_fechas_entrega .titulo_listado .contador {
+      color: #ccc;
+      font-weight: 400;
+      line-height: 1.2;
+      font-size: 16px; }
+  .listado_fechas_entrega .sub_cont {
+    border: 1px solid #d5d5d5; }
+    .listado_fechas_entrega .sub_cont input, .listado_fechas_entrega .sub_cont p {
+      display: inline-block; }
+    .listado_fechas_entrega .sub_cont p {
+      font-size: 13px;
+      line-height: 1.5;
+      color: #333; }
+    .listado_fechas_entrega .sub_cont span {
+      color: #bbb;
+      font-size: 11px;
+      line-height: 0.1 0.9; }
+
+/* Base for label styling */
+[type="checkbox"] {
+  /* checkbox aspect */
+  /* checked mark aspect */
+  /* checked mark aspect changes */
+  /* disabled checkbox */
+  /* accessibility */ }
+  [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px; }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer; }
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); }
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    content: '✔';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    font-size: 18px;
+    line-height: 0.8;
+    color: #09ad7e;
+    transition: all .2s; }
+  [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0); }
+  [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1); }
+  [type="checkbox"]:disabled:not(:checked) + label:before,
+  [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd; }
+  [type="checkbox"]:disabled:checked + label:after {
+    color: #999; }
+  [type="checkbox"]:disabled + label {
+    color: #aaa; }
+  [type="checkbox"]:checked:focus + label:before,
+  [type="checkbox"]:not(:checked):focus + label:before {
+    border: 1px dotted blue; }
+
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #4778d9 !important; }
 
 /*# sourceMappingURL=style.css.map */
