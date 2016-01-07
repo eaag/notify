@@ -12,15 +12,23 @@ $c3   : rgb(228, 85, 85);
 $gray : #ddd;
 
 body{
+	height: 100%;
 	box-sizing: border-box;
 	font-family: 'Open Sans',Arial,sans-serif;
 	color: #000;
+	background-color: rgb(238, 238, 238);
 }
 a{
 	text-decoration: none;
 }
 li,ul,ol{
 	list-style-type: none;
+}
+.center{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 .cw{
 	color: #fff;
@@ -105,6 +113,8 @@ li,ul,ol{
 .nav-sup{
  	@include outer-container(100%);
  	height: 56px;
+ 	position: relative;
+ 	z-index: 10;
 }
 .search_content{
 	width: 256px;
@@ -149,9 +159,12 @@ li,ul,ol{
 
 /*************  Dasboard **********************/
 .Dasboard-subnav{
+	z-index: 10;
+	position: relative;
 	height: 50px;
     border-bottom: 1px solid #bbb;
     padding-left: 20px;
+    overflow-y: hidden;
     li{
     	overflow: hidden;
     }
@@ -173,3 +186,138 @@ li,ul,ol{
 	    border-bottom: 3px solid #21a5b8;
     }
 }
+
+
+.contenedor_general{
+}
+.listado_fechas_entrega,.contenedor_tareas{
+	position: absolute;
+	height: 100%;
+	z-index: 4;
+	margin-top: -106px;
+	padding-top: 107px;
+}
+.contenedor_tareas{
+    width: 40%;
+    right: 60%;
+    p,i,strong{
+		color: #666;
+    }
+    i{
+    	font-size: 42px;
+    }
+    strong{
+    	font-size: 16px;
+    	font-weight: 600;
+    	margin-top: 10px;
+    }
+    p{
+    	font-size: 13px;
+	    line-height: 1.5;
+    	font-weight: 30;
+    }
+    .todo-ok{
+	    padding: 60px 20px 20px;
+    	text-shadow: 0 1px #f6f6f6;
+    }
+    .header{
+	    border: 1px solid #ebebeb;
+        border-radius: 4px;
+    	padding: 15px;
+    	margin: 15px;
+    	a{
+    		font-weight: 600;
+		    line-height: 24px;
+		    &:hover{
+		    	text-decoration: underline;
+		    }
+    	}
+    	a,p{
+    		font-size: 13px;
+			display: inline-block;
+    	}
+    	p{
+    		line-height: 18.2px;
+    		background-color: #1f8b9b;
+    		border:1px solid #1e8797;
+    		margin: 0;
+    		border-radius: 4px;
+    		color: #fff;
+    		color: rgba(255, 255, 255, 0.901961);
+    		padding: 2px 4px;
+    		float: right;
+    	}
+    }
+}
+.bloque_centrado{
+	margin: 0 auto;
+	max-width: 700px;
+	display: block;
+}
+.listado_fechas_entrega{
+	width: 60%;
+	left: 40%;
+	background-color: #fafafa;
+
+	.titulo_listado{
+		margin: 10px;
+		border: solid 1px rgb(221, 221, 221);	   
+		padding: 10px 0;
+	}
+}
+
+/*****************  boton  flotante   ******************/
+.menu_flotante{
+	left: 25px;
+    bottom: 25px;
+    display: block;
+    width: 56px;
+    height: auto;
+   	position: fixed;
+	z-index: 1000;
+	min-height: 200px;
+   	background-color: transparent;
+
+   	li{
+   		display: block;
+	    height: 36px;
+		width: 36px;
+		margin: 10px auto;
+		position: relative;
+		text-align: left;
+		&:last-child{
+			height: 56px;
+			width: 56px;
+		    text-align: left;
+			margin-left: -1px;
+			button{
+				background-color: #e45555;
+			}
+		}
+   	}
+
+}
+.btn_menu_flotante{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #21a5b8;
+	span{
+		left: 50px;
+		white-space: nowrap;
+		position: absolute;
+	}
+}
+// .btn_menu_flotante_root{
+// 	display: block;
+// 	content: " ";
+// 	font-size: 50px;
+// 	font-size: 30px;
+// 	color: #FFF;
+// 	border-radius: 50%;
+//     height: 56px;
+//     width: 56px;
+// }
