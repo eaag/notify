@@ -2473,7 +2473,8 @@ li, ul, ol {
       line-height: 1.2;
       font-size: 16px; }
   .listado_fechas_entrega .sub_cont {
-    border: 1px solid #d5d5d5; }
+    padding: 10px;
+    border-top: 1px solid #d5d5d5; }
     .listado_fechas_entrega .sub_cont input, .listado_fechas_entrega .sub_cont p {
       display: inline-block; }
     .listado_fechas_entrega .sub_cont p {
@@ -2510,17 +2511,19 @@ li, ul, ol {
     height: 17px;
     border: 1px solid #aaa;
     background: #f8f8f8;
-    border-radius: 3px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); }
+    border-radius: 1px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3); }
+  [type="checkbox"]:checked + label:before {
+    background-color: #21a5b8; }
   [type="checkbox"]:not(:checked) + label:after,
   [type="checkbox"]:checked + label:after {
     content: '✔';
     position: absolute;
     top: 3px;
     left: 4px;
-    font-size: 18px;
-    line-height: 0.8;
-    color: #09ad7e;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #ddd;
     transition: all .2s; }
   [type="checkbox"]:not(:checked) + label:after {
     opacity: 0;
