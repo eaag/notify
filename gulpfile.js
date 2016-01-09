@@ -6,7 +6,7 @@ var jade = require('gulp-jade');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('jade', function() {
-  gulp.src('./dev/jade/*.jade')
+  gulp.src('./dev/jade/index.jade')
     .pipe(jade())
     .pipe(gulp.dest('./dist/'))
 });

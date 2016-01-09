@@ -1,47 +1,5 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  font-family: 'Open Sans',Arial,sans-serif;
-  vertical-align: baseline;
-  box-sizing: border-box; }
-
-article, aside, details, figcaption, figure, footer, header, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after {
-  content: '';
-  content: none; }
-
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-button, input {
-  border: none;
-  outline: none;
-  font-family: 'Open Sans',Arial,sans-serif;
-  font-size: 13px;
-  line-height: 1.4;
-  background-color: #fff; }
-
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2127,12 +2085,52 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: 'Open Sans',Arial,sans-serif;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
 body {
+  line-height: 1;
   height: 100%;
   box-sizing: border-box;
   font-family: 'Open Sans',Arial,sans-serif;
   color: #000;
   background-color: #eeeeee; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button, input {
+  border: none;
+  outline: none;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  background-color: #fff; }
 
 a {
   text-decoration: none; }
@@ -2140,11 +2138,75 @@ a {
 li, ul, ol {
   list-style-type: none; }
 
+/* checkbox generales */
+[type="checkbox"] {
+  /* checkbox aspect */
+  /* checked mark aspect */
+  /* checked mark aspect changes */
+  /* disabled checkbox */
+  /* accessibility */ }
+  [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px; }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer; }
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+    border-radius: 3px;
+    box-shadow: inset 0 0px 1px rgba(200, 200, 200, 0.1); }
+  [type="checkbox"]:checked + label:before {
+    background-color: #21a5b8; }
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    content: '✔';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #ddd;
+    transition: all .2s; }
+  [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0); }
+  [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1); }
+  [type="checkbox"]:disabled:not(:checked) + label:before,
+  [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd; }
+  [type="checkbox"]:disabled:checked + label:after {
+    color: #999; }
+  [type="checkbox"]:disabled + label {
+    color: #aaa; }
+  [type="checkbox"]:checked:focus + label:before,
+  [type="checkbox"]:not(:checked):focus + label:before {
+    border: 1px dotted blue; }
+
+label:hover:before {
+  border: 1px solid #4778d9 !important; }
+
 .center {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   display: block; }
+
+.fz13 {
+  font-size: 13px; }
 
 .cw {
   color: #fff; }
@@ -2223,7 +2285,7 @@ li, ul, ol {
   margin-right: auto;
   height: 56px;
   position: relative;
-  z-index: 10; }
+  z-index: 20; }
   .nav-sup::after {
     clear: both;
     content: "";
@@ -2485,67 +2547,83 @@ li, ul, ol {
       color: #bbb;
       font-size: 11px;
       line-height: 0.1 0.9; }
+    .listado_fechas_entrega .sub_cont .espacio_trabajo a {
+      color: #bbb; }
+      .listado_fechas_entrega .sub_cont .espacio_trabajo a:hover {
+        text-decoration: underline; }
 
-/* Base for label styling */
-[type="checkbox"] {
-  /* checkbox aspect */
-  /* checked mark aspect */
-  /* checked mark aspect changes */
-  /* disabled checkbox */
-  /* accessibility */ }
-  [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-    position: absolute;
-    left: -9999px; }
-  [type="checkbox"]:not(:checked) + label,
-  [type="checkbox"]:checked + label {
-    position: relative;
-    padding-left: 25px;
-    cursor: pointer; }
-  [type="checkbox"]:not(:checked) + label:before,
-  [type="checkbox"]:checked + label:before {
-    content: '';
+.sub_cont_right {
+  float: right;
+  margin-top: -36px; }
+  .sub_cont_right .user_perfil {
+    width: 26px;
+    height: 26px;
+    line-height: 26px; }
+
+/*  espacios de trabajo */
+/** menu **/
+.menu_dropdown {
+  position: relative; }
+  .menu_dropdown ul {
+    display: none;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
     position: absolute;
     left: 0;
-    top: 2px;
-    width: 17px;
-    height: 17px;
-    border: 1px solid #aaa;
-    background: #f8f8f8;
-    border-radius: 1px;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3); }
-  [type="checkbox"]:checked + label:before {
-    background-color: #21a5b8; }
-  [type="checkbox"]:not(:checked) + label:after,
-  [type="checkbox"]:checked + label:after {
-    content: '✔';
-    position: absolute;
-    top: 3px;
-    left: 4px;
-    font-size: 12px;
-    line-height: 1.2;
-    color: #ddd;
-    transition: all .2s; }
-  [type="checkbox"]:not(:checked) + label:after {
-    opacity: 0;
-    transform: scale(0); }
-  [type="checkbox"]:checked + label:after {
-    opacity: 1;
-    transform: scale(1); }
-  [type="checkbox"]:disabled:not(:checked) + label:before,
-  [type="checkbox"]:disabled:checked + label:before {
-    box-shadow: none;
-    border-color: #bbb;
-    background-color: #ddd; }
-  [type="checkbox"]:disabled:checked + label:after {
-    color: #999; }
-  [type="checkbox"]:disabled + label {
-    color: #aaa; }
-  [type="checkbox"]:checked:focus + label:before,
-  [type="checkbox"]:not(:checked):focus + label:before {
-    border: 1px dotted blue; }
+    top: 56px;
+    padding: 0;
+    z-index: 20; }
+  .menu_dropdown li {
+    width: 100%;
+    white-space: nowrap; }
+  .menu_dropdown a, .menu_dropdown strong {
+    padding: 5px 20px;
+    display: block; }
+  .menu_dropdown a {
+    color: #454545;
+    min-height: 20px;
+    line-height: 20px;
+    font-weight: 300; }
+    .menu_dropdown a:hover {
+      background-color: #e1f4f7; }
 
-/* hover style just for information */
-label:hover:before {
-  border: 1px solid #4778d9 !important; }
+.menu_workspace ul {
+  padding-bottom: 10px; }
+
+.menu_workspace ul li strong {
+  color: #21a5b8;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 19px;
+  text-transform: uppercase; }
+
+.menu_workspace ul li input {
+  padding: 3px 10px 3px 7px;
+  margin: 23px 18px 5px; }
+
+.menu_workspace ul li .filtro {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  width: 246px; }
+  .menu_workspace ul li .filtro:focus {
+    border-color: #21a5b8; }
+  .menu_workspace ul li .filtro::-webkit-input-placeholder {
+    color: #dddddd;
+    font-size: 13px;
+    line-height: 18.2px; }
+  .menu_workspace ul li .filtro::-moz-placeholder {
+    color: #dddddd;
+    font-size: 13px;
+    line-height: 18.2px; }
+  .menu_workspace ul li .filtro:-moz-placeholder {
+    color: #dddddd;
+    font-size: 13px;
+    line-height: 18.2px; }
+  .menu_workspace ul li .filtro:-ms-input-placeholder {
+    color: #dddddd;
+    font-size: 13px;
+    line-height: 18.2px; }
 
 /*# sourceMappingURL=style.css.map */

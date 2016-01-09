@@ -1,3 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import "font-awesome/font-awesome";
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+$c1   : #21a5b8;
+$c1_d : #1f8b9b;
+$c2   : rgb(102, 102, 102);
+$c3   : rgb(228, 85, 85);
+$gray : #ddd;
+
+
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -11,9 +24,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 article, aside, details, figcaption, figure, footer, header, menu, nav, section {
   display: block; }
 
-body {
-  line-height: 1; }
-
+body{
+  line-height: 1; 
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Open Sans',Arial,sans-serif;
+  color: #000;
+  background-color: rgb(238, 238, 238);
+}
 ol, ul {
   list-style: none; }
 
@@ -41,4 +59,85 @@ button,input{
   font-size: 13px;
   line-height: 1.4;
   background-color: #fff;
+}
+
+a{
+  text-decoration: none;
+}
+li,ul,ol{
+  list-style-type: none;
+}
+
+/* checkbox generales */
+
+[type="checkbox"]{
+
+  &:not(:checked),
+  &:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  &:not(:checked) + label,
+  &:checked + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+  }
+
+  /* checkbox aspect */
+  &:not(:checked) + label:before,
+  &:checked + label:before {
+    content: '';
+    position: absolute;
+    left:0; top: 2px;
+    width: 17px; height: 17px;
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+    border-radius: 3px;
+    box-shadow: inset 0 0px 1px rgba(200,200,200,0.1)
+  }
+  &:checked + label:before {
+    background-color: $c1;
+  }
+  /* checked mark aspect */
+  &:not(:checked) + label:after,
+  &:checked + label:after {
+    content: '✔';
+    position: absolute;
+    top: 3px; left: 4px;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #ddd;
+    transition: all .2s;
+  }
+  /* checked mark aspect changes */
+  &:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+  &:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+  /* disabled checkbox */
+  &:disabled:not(:checked) + label:before,
+  &:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+  &:disabled:checked + label:after {
+    color: #999;
+  }
+  &:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+  &:checked:focus + label:before,
+  &:not(:checked):focus + label:before {
+    border: 1px dotted blue;
+  }
+}
+label:hover:before {
+  border: 1px solid #4778d9!important;
 }

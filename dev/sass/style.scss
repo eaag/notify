@@ -1,34 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 @import "reset";
-@import "font-awesome/font-awesome";
-@import "bourbon/bourbon";
-@import "neat/neat";
 
-
-$c1	  : #21a5b8;
-$c1_d : #1f8b9b;
-$c2	  : rgb(102, 102, 102);
-$c3   : rgb(228, 85, 85);
-$gray : #ddd;
-
-body{
-	height: 100%;
-	box-sizing: border-box;
-	font-family: 'Open Sans',Arial,sans-serif;
-	color: #000;
-	background-color: rgb(238, 238, 238);
-}
-a{
-	text-decoration: none;
-}
-li,ul,ol{
-	list-style-type: none;
-}
 .center{
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+}
+.fz13{
+	font-size: 13px;
 }
 .cw{
 	color: #fff;
@@ -113,7 +92,7 @@ li,ul,ol{
  	@include outer-container(100%);
  	height: 56px;
  	position: relative;
- 	z-index: 10;
+ 	z-index: 20;
 }
 .search_content{
 	width: 256px;
@@ -399,82 +378,92 @@ li,ul,ol{
 		    font-size: 11px;
 		    line-height: .1.9;
 		}
+		.espacio_trabajo a{
+			color: #bbb;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+.sub_cont_right{
+	float: right;
+	margin-top: -36px;
+	.user_perfil{
+		width: 26px;
+		height: 26px;
+		line-height: 26px;
 	}
 }
 
 
 
-/* Base for label styling */
+/*  espacios de trabajo */
 
-[type="checkbox"]{
-
-  &:not(:checked),
-  &:checked {
-    position: absolute;
-    left: -9999px;
-  }
-  &:not(:checked) + label,
-  &:checked + label {
-    position: relative;
-    padding-left: 25px;
-    cursor: pointer;
-  }
-
-  /* checkbox aspect */
-  &:not(:checked) + label:before,
-  &:checked + label:before {
-    content: '';
-    position: absolute;
-    left:0; top: 2px;
-    width: 17px; height: 17px;
-    border: 1px solid #aaa;
-    background: #f8f8f8;
-    border-radius: 1px;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.3)
+/** menu **/
+.menu_dropdown{
+	position: relative;
+	ul{
+		display: none;
+		text-align: left;
+		background-color: #fff;
+		box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.4);
+		position: absolute;
+		left: 0;
+		top: 56px;
+		padding: 0;
+		z-index: 20;
 	}
-  &:checked + label:before {
-  	background-color: $c1;
-  }
-  /* checked mark aspect */
-  &:not(:checked) + label:after,
-  &:checked + label:after {
-    content: '✔';
-    position: absolute;
-    top: 3px; left: 4px;
-    font-size: 12px;
-    line-height: 1.2;
-    color: #ddd;
-    transition: all .2s;
-  }
-  /* checked mark aspect changes */
-  &:not(:checked) + label:after {
-    opacity: 0;
-    transform: scale(0);
-  }
-  &:checked + label:after {
-    opacity: 1;
-    transform: scale(1);
-  }
-  /* disabled checkbox */
-  &:disabled:not(:checked) + label:before,
-  &:disabled:checked + label:before {
-    box-shadow: none;
-    border-color: #bbb;
-    background-color: #ddd;
-  }
-  &:disabled:checked + label:after {
-    color: #999;
-  }
-  &:disabled + label {
-    color: #aaa;
-  }
-  /* accessibility */
-  &:checked:focus + label:before,
-  &:not(:checked):focus + label:before {
-    border: 1px dotted blue;
-  }
+	li{
+		width: 100%;
+		white-space: nowrap;
+	}
+	a,strong{
+		padding: 5px 20px;
+		display: block;
+	}
+	a{
+		color: #454545;
+		min-height: 20px;
+		line-height: 20px;
+		font-weight: 300;
+		&:hover{
+			background-color: rgb(225, 244, 247);
+		}
+	}
 }
-/* hover style just for information */
-label:hover:before {
-  border: 1px solid #4778d9!important;
+.menu_workspace{
+	ul{
+		padding-bottom: 10px;
+	}
+	ul	li{
+
+		strong{
+			color: $c1;
+			font-weight: 700;
+			font-size: 11px;
+			line-height: 19px;
+			text-transform: uppercase;
+		}
+		input{
+			padding: 3px 10px 3px 7px;
+			margin: 23px 18px 5px;
+		}
+		.filtro{
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 30px;
+			width: 246px;
+			&:focus{
+				border-color: rgb(33,165,184);
+			}
+		 	@include placeholder {
+				color: rgb(221, 221, 221);
+				font-size: 13px;
+				line-height: 18.2px;
+			}
+		}
+	}
 }

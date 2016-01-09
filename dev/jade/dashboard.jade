@@ -1,0 +1,40 @@
+nav.bgw.Dasboard-subnav
+	ul.push_left
+		li: button.active Notificaciones
+		li: button Actividades
+.contenedor_general
+	.contenedor_tareas
+		.header.bg1
+			a(href="").cw Mis Tareas
+			p.contador_tareas 2 para hoy
+		.todo-ok
+			i.fa.fa-thumbs-up.center
+			p.center.
+				#[strong.center ¡Bien hecho!]
+				Ahora puedes darte un descanso o comprobar tus tareas			
+
+	.listado_fechas_entrega
+		.bloque_centrado
+			.contenido_listado
+				.titulo_listado
+					i.fa.fa-angle-down
+					strong Hoy
+					span.contador (2)  
+				.sub_cont
+					p(style="position:relative")
+						input(type="checkbox", name="tarea", value="true", id="test2")
+						label(for="test2") 
+					p Tarea 1
+					.espacio_trabajo
+						span #[a(href="") Espacio de trabajo] » #[a(href="") tarea]
+					.sub_cont_right
+						a.user_perfil(href="") E
+				.sub_cont
+					p(style="position:relative")
+						input(type="checkbox", name="tarea", value="true", id="test2")
+						label(for="test2") 
+					p Tarea 2
+					.espacio_trabajo
+						span #[a(href="") Espacio de trabajo] » #[a(href="") tarea2]
+					.sub_cont_right
+						a.user_perfil(href="") E
